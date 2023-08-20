@@ -72,10 +72,8 @@ const login = (req, res, next) => {
 };
 
 const logout = (req, res) => {
-  if (res.cookie) {
-    res.clearCookie('jwt');
-    res.send({ message: 'Вы успешно вышли из аккаунта!' });
-  }
+  res.clearCookie('jwt');
+  res.send({ message: 'Вы успешно вышли из аккаунта!' });
 };
 
 module.exports = {
